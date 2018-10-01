@@ -352,10 +352,12 @@ footer a:active{
 .right-footer{
   flex: 1 1 auto;
 	text-align: right;
+	padding-right: 2rem;
 }
 .mid-footer{
   flex: 1 1 auto;
 	text-align: center;
+
 }
 
 /* You can change/add breakpoints, just didnt want to put in 15 of them */
