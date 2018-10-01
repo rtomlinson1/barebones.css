@@ -6,7 +6,7 @@ This is a project I used to gain a better understanding of CSS including grid, f
 
 I realize that most developers have already created a library or framework for themselves, but it is my hope in sharing this that aspiring developers like myself can use it to learn CSS without a large framework. I plan to update this and refactor as I learn more, but I am proud of the way it has turned out in just a few hours. (Writing this documentation is taking almost as long as creating this project.)
 
-Barebones will require you to think about your design. You will deal with specificity, and can make changes without using the important tag. I have labeled the sections in the CSS file, and tried to keep a logical enough order that anyone could use barebones and modify it easily to meet their design needs. My goal was to avoid the bloated, ready made nature of a tool like bootstrap, where several color classes are available for each element. I have managed to keep a commented, un-minified stylesheet to < 500 lines, that still provides template classes for grid, and flexbox, — as well as a responsive nav with a hamburger dropdown menu that does not require glyphs or javascript. If desired, javascript can be added or the nav could be completely reworked.
+Barebones will require you to think about your design. You will deal with specificity, and can make changes without using the !important tag. I have labeled the sections in the CSS file, and tried to keep a logical enough order that anyone could use barebones and modify it easily to meet their design needs. My goal was to avoid the bloated, ready made nature of a tool like bootstrap, where several color classes are available for each element. I have managed to keep a commented, un-minified stylesheet to < 500 lines, that still provides template classes for grid, and flexbox, — as well as a responsive nav with a hamburger dropdown menu that does not require glyphs or javascript. If desired, javascript can be added or the nav could be completely reworked.
 
 I make heavy use of the REM measurement and set just one root font-size for the whole html document. This allows my size classes to work predictably.
 
@@ -14,7 +14,7 @@ I make heavy use of the REM measurement and set just one root font-size for the 
 
 ## CSS Reset
 - - - -
-I used a common css reset and modified it slightly to keep default styles for <em> and <strong>. At the end of the reset, I define a base font-size for the whole document, and then set the <h1> - <h6> tags to the following (note that markdown will give them its own default styles here)
+I used a common css reset and modified it slightly to keep default styles for <em> and <strong>. At the end of the reset, I define a base font-size for the whole document, and then set the h1 - h6 tags to the following (note that markdown will give them its own default styles here)
 
 
 ## HEADINGS
@@ -33,7 +33,7 @@ I did not add any heading font or styles. This is so Barebones can be used easil
 ## COLORS
 - - - -
 I added some default color classes and background color classes that override some browser defaults. This is simply because I liked these colors better and found it useful to be able to quickly add colors via class assignment in my html. In many cases you will still want or even need to define your own colors inside a custom class to adjust the scope or specificity of the color's application.
-
+```
 .black{color:black;}
 .white{color:white;}
 .silver{color:#afafaf;}
@@ -71,12 +71,12 @@ I added some default color classes and background color classes that override so
 .bg-lime{background-color:#55f45d;}
 .bg-purple{background-color:#49349b;}
 .bg-fuchsia{background-color:#654ebf;}
-
+```
 
 
 ## MARGIN AND PADDING
 - - - -
-Similar to colors, many times margins/padding will need to be defined within a custom class.  For elements that do not change state, like a <p> or <span>, these classes can be used and modified. I have capitalized them here to explain them, but the classes are all lowercase in the CSS file. 
+Similar to colors, many times margins/padding will need to be defined within a custom class.  For elements that do not change state, like a "<p>" or "<span>", these classes can be used and modified. I have capitalized them here to explain them, but the classes are all lowercase in the CSS file. 
 
 P = padding
 M = margin
@@ -89,11 +89,12 @@ half = .5rem
 *letters are all lowercase, then hyphen, then the number (or half)*
 
 example
+```
 <div class=“content”>
 	<p class=“**pl-1**”>Padding left 1 rem</p>
 	<div class=“box **p-half**”>Box with .5rem padding on all sides</p>
 </div>
-
+```
 
 ## BIGGER / SMALLER TEXT
 - - - -
@@ -117,7 +118,7 @@ Some may call this a “hack” and it is certainly not the cleanest way to achi
 ## NAV-LINKS
 - - - -
 The nav links class is supposed to be included on the div that contains the. navigation items. I prefer to code this as follows:
-
+```
 <nav class=“nav-wrapper”>
 	<h1 class=“logo pb-1”>LOGO</h1>
 	<input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
@@ -132,7 +133,7 @@ The nav links class is supposed to be included on the div that contains the. nav
         	<span class="white">&#x2630;</span>
       	</label>
 </nav>
-
+```
 Notice the additional classes **“.hamburger-toggle”** and **“.hamburger-toggle-label”**. If you want to use the checkbox method for a dropdown nav, you will need to label them with these classes.
 
 ## CONTENT
