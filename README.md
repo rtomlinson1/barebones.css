@@ -138,7 +138,7 @@ Notice the additional classes **“.hamburger-toggle”** and **“.hamburger-to
 
 ## CONTENT
 - - - -
-I use this class to wrap the main part of the body, excluding the nav and footer. It is used to make content stay out of these areas since they are positioned absolutely. You should only have one content div. I would probably use it as a class for <main>.
+I use this class to wrap the main part of the body, excluding the nav and footer. It is used to make content stay out of these areas since they are positioned absolutely. You should only have one content div. I would probably use it as a class for ```<main>```
 
 
 ## GRID & GRID-ITEM
